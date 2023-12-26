@@ -12,7 +12,7 @@ import time
 import numpy as np
 
 
-N = 10000
+N = 1000000
 arr = np.random.randint(0,10,N)
 
 sum=0
@@ -47,7 +47,7 @@ if __name__=='__main__':
     n_proc = multiprocessing.cpu_count()
     # вычисляем сколько циклов вычислений будет приходится
     # на 1 ядро, что бы в сумме получилось 80 или чуть больше
-    calc = 12 // n_proc + 1
+    calc = 250000 // n_proc + 1
     processesed(n_proc, calc)
 
     print(f"Всего {n_proc} ядер в процессоре")
